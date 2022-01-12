@@ -1,14 +1,14 @@
 #!/usr/bin/env nextflow
-params.shouldFail = true 
+params.failme = true 
 
 process fail {
   echo true
   when:
-  params.shouldFail
+  params.failme
 
   script:
   '''  
-    echo This will keep failing until params.shouldFail is false!
+    echo This will keep failing until params.failme is false!
     exit 1
   '''
 }
@@ -18,7 +18,7 @@ process succeed {
   output: 
   file 'x.txt' into bar_ch
   when:
-  !params.shouldFail
+  !params.failme
 
   script:
   '''

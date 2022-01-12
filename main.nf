@@ -15,8 +15,6 @@ process fail {
 
 process succeed {
   echo true
-  output: 
-  file 'x.txt' into bar_ch
   when:
   !params.failme
 

@@ -1,4 +1,4 @@
-Hello world script
+Nextflow test
 ====================
 
-A simple script showing the basic Hello World! example for the Nextflow framework. 
+A playground repo for trying out nextflow scripts.

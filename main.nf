@@ -1,10 +1,10 @@
 #!/usr/bin/env nextflow
-params.failme = true 
+params.shouldFail = true 
 
 process fail {
   echo true
   when:
-  params.failme
+  params.shouldFail
 
   script:
   '''  
@@ -16,7 +16,7 @@ process fail {
 process succeed {
   echo true
   when:
-  !params.failme
+  !params.shouldFail
 
   script:
   '''
